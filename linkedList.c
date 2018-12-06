@@ -32,6 +32,7 @@ linknd_t* create_node(int value) {
 
 
 void addTail(int value){
+	
 	linknd_t *ndPtr, *newPtr;
 	
 	if (list == NULL)
@@ -50,3 +51,25 @@ void addTail(int value){
 	}
 	
 }
+
+
+
+void genList(void){
+	
+	list = create_node(0);
+	
+	return;
+} //header node »ý¼º  
+
+
+
+void print_list(void){
+	
+	linknd_t *ndPtr;
+	
+	ndPtr = (linknd_t*)list->next;
+	while(ndPtr != NULL){
+		printf("%i ", ndPtr->data);
+		ndPtr = ndPtr->next;
+	}
+} 
